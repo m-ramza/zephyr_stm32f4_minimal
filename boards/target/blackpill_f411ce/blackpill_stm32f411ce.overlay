@@ -1,0 +1,17 @@
+#include "blackpill_stm32f411ce_peripheral.dtsi"
+#include "blackpill_stm32f411ce_io_master.dtsi"
+
+
+/**** New node additions to root ****/
+/ {
+	aliases {
+		uart-a = &usart2;
+		uart-b = &usart6;
+		sw0 = &button0;
+	};
+
+	chosen {
+		zephyr,console = &usart1;
+		zephyr,shell-uart = &usart1;
+	};
+};

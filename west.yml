@@ -1,0 +1,18 @@
+
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v3.6.0
+      west-commands: scripts/west-commands.yml
+      import:
+        name-allowlist:
+        - hal_st
+        - hal_stm32
+        - cmsis
+
+  self:
+    path: zephyr_stm32f4_minimal
